@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {darken, transparentize} from 'polished';
+import {transparentize} from 'polished';
 
 export const CloseButton = styled.div`
     img{
@@ -75,7 +75,7 @@ export const TransactionTypeContainer = styled.div`
 `
 
 
-//Definindo o estado da cor
+//Definindo o estado da cor do botão quando clicar
 interface StateButtonProps{
     isActive: boolean;
     activeColor: 'green' | 'red';
@@ -91,6 +91,7 @@ export const RadioBox = styled.button<StateButtonProps>`
         border: 1px solid #d7d7d7;
         border-radius: 0.25rem;
 
+        //usando o hover no button com a framework polished
         background: ${(props) => props.isActive
          ? transparentize(0.9, colors[props.activeColor])
          : 'transparent'};
