@@ -12,7 +12,7 @@ export function Header ({onOpenNewTransactionModal}: HeaderPros) {
         <Container>
             <Content>
                     <img src={logoImg} alt="dt money" />
-                    <button type="button" onClick={onOpenNewTransactionModal}>
+                    <button title='Nova Transação' type="button" onClick={onOpenNewTransactionModal}>
                         Nova Transação
                     </button>
             </Content>
